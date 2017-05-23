@@ -1,7 +1,7 @@
 FROM centos
 MAINTAINER Niels Højen <niels@hojen.net>
 
-ENV DOCKER_FWBOOSTER_VERSION 12.0.3
+ENV FWBOOSTER_VERSION 12.0.3
 
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
