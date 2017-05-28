@@ -1,4 +1,5 @@
-FROM centos:xcentos7
+FROM centos:centos7
+
 MAINTAINER Niels Højen <niels@hojen.net>
 
 ENV FWBOOSTER_VERSION 12.0.3
