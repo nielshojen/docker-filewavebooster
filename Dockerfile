@@ -2,7 +2,7 @@ FROM centos:centos7
 
 MAINTAINER Niels Højen <niels@hojen.net>
 
-ENV FWBOOSTER_VERSION 12.2.0
+ENV FWBOOSTER_VERSION 12.3.0
 
 RUN yum -y install wget unzip
 RUN wget https://fwdl.filewave.com/$FWBOOSTER_VERSION/FileWave_Linux_$FWBOOSTER_VERSION.zip
