@@ -19,3 +19,6 @@ EXPOSE 20003
 EXPOSE 20004
 EXPOSE 20013
 EXPOSE 20014
+
+CMD /bin/chmod +x /run.sh
+CMD /run.sh
