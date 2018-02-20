@@ -15,6 +15,7 @@ RUN rm -f fwxserver-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 RUN yum install -y --nogpgcheck fwbooster-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 
 CMD /etc/init.d/fw-booster start
+CMD sleep 10
 CMD /usr/bin/tail -F /var/log/fwbooster.log
 
 VOLUME /var/FWBooster
