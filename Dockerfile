@@ -10,7 +10,9 @@ RUN unzip FileWave_Linux_$FWBOOSTER_VERSION.zip
 RUN rm -f fwxserver-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 RUN yum install -y --nogpgcheck fwbooster-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 
-CMD /usr/local/sbin/fwbooster
+CMD /usr/local/filewave/python.v27/bin/supervisorctl -c /usr/local/etc/filewave/supervisor/supervisord-booster.conf start fwbooster
+
+CMD /usr/bin/tail -F /var/log/fwbooster.log
 
 VOLUME /var/FWBooster
 VOLUME /usr/local/etc
