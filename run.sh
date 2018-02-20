@@ -1,3 +1,5 @@
+#!/bin/bash
+
 /etc/init.d/fw-booster start
-sleep 10
+/bin/sleep 10
 /usr/bin/tail -F /var/log/fwbooster.log
