@@ -10,8 +10,7 @@ RUN unzip FileWave_Linux_$FWBOOSTER_VERSION.zip
 RUN rm -f fwxserver-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 RUN yum install -y --nogpgcheck fwbooster-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 
-CMD /etc/init.d/fw-booster start
-CMD /usr/bin/tail -F /var/log/fwbooster.log
+ADD run.sh /run.sh
 
 VOLUME /var/FWBooster
 VOLUME /usr/local/etc
@@ -20,3 +19,5 @@ EXPOSE 20003
 EXPOSE 20004
 EXPOSE 20013
 EXPOSE 20014
+
+CMD /bin/bash /run.sh
