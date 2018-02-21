@@ -21,4 +21,3 @@ EXPOSE 20013
 EXPOSE 20014
 
 CMD /bin/chmod go+x /run.sh
-CMD /run.sh
