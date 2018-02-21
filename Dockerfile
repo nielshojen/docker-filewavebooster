@@ -20,7 +20,4 @@ EXPOSE 20004
 EXPOSE 20013
 EXPOSE 20014
 
-CMD /bin/chmod go+x /run.sh
-
-CMD /etc/init.d/fw-booster start
-CMD /usr/bin/tail -F /var/log/fwbooster.log
+CMD /bin/bash /run.sh
