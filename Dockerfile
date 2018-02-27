@@ -5,7 +5,6 @@ MAINTAINER Niels Højen <niels@hojen.net>
 ENV FWBOOSTER_VERSION 12.7.0
 
 VOLUME /var/FWBooster
-VOLUME /usr/local/etc
 
 RUN yum -y install wget unzip initscripts
 RUN wget https://fwdl.filewave.com/$FWBOOSTER_VERSION/FileWave_Linux_$FWBOOSTER_VERSION.zip
