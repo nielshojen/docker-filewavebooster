@@ -2,7 +2,7 @@ FROM centos:centos7
 
 MAINTAINER Niels Højen <niels@hojen.net>
 
-ENV FWBOOSTER_VERSION 12.7.0
+ENV FWBOOSTER_VERSION 12.3.0
 
 VOLUME /var/FWBooster
 
