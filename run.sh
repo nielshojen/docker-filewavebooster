@@ -15,4 +15,4 @@ cat fwbooster.conf | \
 	sed "s/.*freeDiskSpaceLimitMB>.*/<freeDiskSpaceLimitMB><UINT64><$(/bin/echo ${#FWBOOSTER_FREEDISKSPACELIMIT})><$FWBOOSTER_FREEDISKSPACELIMIT>/" > /usr/local/etc/fwbooster.conf
 
 /etc/init.d/fw-booster start
-#/usr/bin/tail -F /var/log/fwbooster.log
+/usr/bin/tail -F /var/log/fwbooster.log
