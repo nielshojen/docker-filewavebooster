@@ -13,7 +13,7 @@ Several options are customizable using environment variables.
 * ``FWBOOSTER_PORT``: The TCP port of the Booster. Defaults to ``20013``.
 * ``FWBOOSTER_PUBPORT``: The Publish of the Booster. Defaults to ``20003``.
 * ``FWSERVER1_PORT``: The TCP Port of Server 1 that the Booster Connects to. Defaults to ``20015``.
-* ``FWSERVER1_ADDRESS``: The IP or DNS address of Server 1 that the Booster Connects to. Defaults to ``no.server.set``.
+* ``FWSERVER1_ADDR``: The IP or DNS address of Server 1 that the Booster Connects to. Defaults to ``no.server.set``.
 * ``FWSERVER1_SUBSPORT``: The Subscriptions TCP port of Server 1 that the Booster Connects to. Defaults to ``20005``.
 * ``FWBOOSTER_SSLLOADER``: Boolean value to turn SSL on/off for Loader Connections. Defaults to ``0``.
 * ``FWBOOSTER_FREEDISKSPACELIMIT``: Free Diskspace Limit. Defaults to ``500``.
