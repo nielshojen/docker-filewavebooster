@@ -28,3 +28,18 @@ $ docker run -d --name=filewavebooster \
   -e FWSERVER1_ADDRESS="myfilewaveserver.mydomain.com" \
   nielshojen/filewavebooster
 ```
+
+# Persisting the Booster Data
+
+The booster data lives in /var/FWBooster, so mounting that to a directory on the host would require an extra line:
+
+```bash
+$ docker pull nielshojen/filewavebooster
+$ docker run -d --name=filewavebooster \
+  --restart="always" \
+  --net=host \
+  -v /local/host/folder:/var/FWBooster \
+  -e FWBOOSTER_NAME="supercoolbooster" \
+  -e FWSERVER1_ADDRESS="myfilewaveserver.mydomain.com" \
+  nielshojen/filewavebooster
+```
