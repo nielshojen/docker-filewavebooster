@@ -21,10 +21,10 @@ Several options are customizable using environment variables.
 
 ```bash
 $ docker pull nielshojen/filewavebooster
-$ docker run -d --name="filewavebooster" \
-  --net=host \
+$ docker run -d --name=filewavebooster \
   --restart="always" \
+  --net=host \
   -e FWBOOSTER_NAME="supercoolbooster" \
   -e FWSERVER1_ADDRESS="myfilewaveserver.mydomain.com" \
-nielshojen/filewavebooster
+  nielshojen/filewavebooster
 ```
