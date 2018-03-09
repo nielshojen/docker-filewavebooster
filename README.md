@@ -1,4 +1,4 @@
-# docker-filewavebooster
+# FileWave Booster Docker Image
 
 This Docker image runs a FileWave Booster
 
