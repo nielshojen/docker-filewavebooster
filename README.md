@@ -1,25 +1,31 @@
-# docker-filewavebooster
+docker-filewavebooster
+=============
 
-Defaults:
+This Docker image runs a FileWave Booster
 
-FWBOOSTER_NAME "NewBooster"
+# Settings
 
-FWBOOSTER_LOCATION "New Branch Office"
+Several options are customizable using environment variables.
 
-FWBOOSTER_PASSWORD "filewave"
+* ``FWBOOSTER_NAME``: The device name of the Booster. Defaults to ``NewBooster``.
+* ``FWBOOSTER_LOCATION``: The location of the Booster. Defaults to ``New Branch Office``.
+* ``FWBOOSTER_PASSWORD``: The password of the Booster. Defaults to ``filewave``.
+* ``FWBOOSTER_PORT``: The TCP port of the Booster. Defaults to ``20013``.
+* ``FWBOOSTER_PUBPORT``: The Publish of the Booster. Defaults to ``20003``.
+* ``FWSERVER1_PORT``: The TCP Port of Server 1 that the Booster Connects to. Defaults to ``20015``.
+* ``FWSERVER1_ADDRESS``: The IP or DNS address of Server 1 that the Booster Connects to. Defaults to ``no.server.set``.
+* ``FWSERVER1_SUBSPORT``: The Subscriptions TCP port of Server 1 that the Booster Connects to. Defaults to ``20005``.
+* ``FWBOOSTER_SSLLOADER``: Boolean value to turn SSL on/off for Loader Connections. Defaults to ``0``.
+* ``FWBOOSTER_FREEDISKSPACELIMIT``: Free Diskspace Limit. Defaults to ``500``.
 
-FWBOOSTER_PORT 20013
+#Running the FileWave Booster Container
 
-FWBOOSTER_PUBPORT 20003
-
-FWSERVER1_PORT 20015
-
-FWSERVER1_ADDR "no.server.set"
-
-FWSERVER1_SUBSPORT 20005
-
-FWBOOSTER_SSLLOADER 0
-
-FWBOOSTER_FREEDISKSPACELIMIT 500
-
-Set accordingly for your environment
+```bash
+$ docker pull nielshojen/filewavebooster
+$ docker run -d --name="filewavebooster" \
+  --net=host \
+  --restart="always" \
+  -e FWBOOSTER_NAME="supercoolbooster" \
+  -e FWSERVER1_ADDRESS="myfilewaveserver.mydomain.com" \
+nielshojen/filewavebooster
+```
