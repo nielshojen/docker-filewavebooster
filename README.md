@@ -18,7 +18,7 @@ Several options are customizable using environment variables.
 * ``FWBOOSTER_SSLLOADER``: Boolean value to turn SSL on/off for Loader Connections. Defaults to ``0``.
 * ``FWBOOSTER_FREEDISKSPACELIMIT``: Free Diskspace Limit. Defaults to ``500``.
 
-#Running the FileWave Booster Container
+# Running the FileWave Booster Container
 
 ```bash
 $ docker pull nielshojen/filewavebooster
