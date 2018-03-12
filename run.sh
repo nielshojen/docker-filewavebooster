@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HEXPASSWORD=$(/usr/bin/printf $FWBOOSTER_PASSWORD | /usr/bin/hexdump -C | /usr/bin/awk '{for(i=2;i<=NF;++i)print $i}' | /usr/bin/xargs | /usr/bin/sed 's/ //g' | awk -F "|" '{ print $1 })
+HEXPASSWORD=$(/usr/bin/printf $FWBOOSTER_PASSWORD | /usr/bin/hexdump -C | /usr/bin/awk '{for(i=2;i<=NF;++i)print $i}' | /usr/bin/xargs | /usr/bin/sed 's/ //g' | awk -F "|" '{ print $1 }')
 
 cat fwbooster.conf | \
 	sed "s/.*boosterName.*/<boosterName><ASCII><$(/bin/echo ${#FWBOOSTER_NAME})><$FWBOOSTER_NAME>/" |\
