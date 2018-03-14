@@ -21,7 +21,7 @@ Several options are customizable using environment variables.
 
 ```bash
 $ docker pull nielshojen/filewavebooster
-$ docker run -d --name=filewavebooster \
+$ docker run -d --restart always --name=filewavebooster \
   --restart="always" \
   --net=host \
   -e FWBOOSTER_NAME="supercoolbooster" \
@@ -35,7 +35,7 @@ The booster data lives in /var/FWBooster, so mounting that to a directory on the
 
 ```bash
 $ docker pull nielshojen/filewavebooster
-$ docker run -d --name=filewavebooster \
+$ docker run -d --restart always --name=filewavebooster \
   --restart="always" \
   --net=host \
   -v /local/host/folder:/var/FWBooster \
@@ -50,7 +50,7 @@ You can use the version tag to run a specific version fo the booster if needed (
 
 ```bash
 $ docker pull nielshojen/filewavebooster:12.3.0
-$ docker run -d --name=filewavebooster \
+$ docker run -d --restart always --name=filewavebooster \
   --restart="always" \
   --net=host \
   -e FWBOOSTER_NAME="supercoolbooster" \
