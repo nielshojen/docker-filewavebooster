@@ -46,14 +46,14 @@ $ docker run -d --restart always --name=filewavebooster \
 
 # Specific Versions
 
-You can use the version tag to run a specific version fo the booster if needed (eg. 12.3.0):
+You can use the version tag to run a specific version fo the booster if needed (eg. 12.9.0):
 
 ```bash
-$ docker pull nielshojen/filewavebooster:12.3.0
+$ docker pull nielshojen/filewavebooster:12.9.0
 $ docker run -d --restart always --name=filewavebooster \
   --restart="always" \
   --net=host \
   -e FWBOOSTER_NAME="supercoolbooster" \
   -e FWSERVER1_ADDRESS="myfilewaveserver.mydomain.com" \
-  nielshojen/filewavebooster:12.3.0
+  nielshojen/filewavebooster:12.9.0
 ```
