@@ -1,6 +1,6 @@
 # FileWave Booster Docker Image
 
-## UPDATE: FileWave got their knickers in a bunch and told me to remove the image from dokcer hub. So fork off this repo, Change the Dockerfile as you see fit and roll your own image 
+## UPDATE: FileWave got their knickers in a bunch and told me to remove the image from docker hub. So fork off this repo, Change the Dockerfile as you see fit and roll your own image 
 
 This Docker image runs a FileWave Booster
 
