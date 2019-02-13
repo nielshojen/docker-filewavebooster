@@ -17,7 +17,7 @@ ENV FWBOOSTER_FREEDISKSPACELIMIT 500
 VOLUME /var/FWBooster
 
 RUN yum -y install wget unzip initscripts
-RUN wget https://fwdl.filewave.com/$FWBOOSTER_VERSION/FileWave_Linux_$FWBOOSTER_VERSION.zip
+RUN wget [ INSERT DOWNLOAD URL HERE ]
 RUN unzip FileWave_Linux_$FWBOOSTER_VERSION.zip
 RUN rm -f fwxserver-$FWBOOSTER_VERSION-1.0.x86_64.rpm
 RUN yum install -y --nogpgcheck fwbooster-$FWBOOSTER_VERSION-1.0.x86_64.rpm
